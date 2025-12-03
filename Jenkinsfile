@@ -22,9 +22,8 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                bat 'kubectl apply -f deployment.yaml --validate=false'
-                bat 'kubectl apply -f service.yaml'
-
+                bat 'kubectl apply -f deployment.yaml --validate=false --insecure-skip-tls-verify'
+                bat 'kubectl apply -f service.yaml --insecure-skip-tls-verify'
             }
         }
     }
