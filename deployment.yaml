@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: Deployment  
-metadata:
-  name: Deployment
+kind: Deployment
+metadata: 
+  name: kubedemoapp-deployment
 spec:
   replicas: 3
   selector:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: kubedemoapp-container
-        image: kubedemoapp-image:latest
+        image: sabavathlakshmi/kubedemoapp:latest
         ports:
-        - containerPort: 80 
+        - containerPort: 80
