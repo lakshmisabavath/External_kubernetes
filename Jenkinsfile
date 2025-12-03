@@ -16,8 +16,8 @@ pipeline{
         stage('Push'){
             steps{
                 echo 'Push docker image'
-                bat 'docker tag kubedemoapp:v1 sabavathlakshmi/sample:t1'
-                bat 'docker push sabavathlakshmi/sample:t1'
+                bat 'docker tag kubedemoapp:v1 sabavathlakshmi/sample:t2'
+                bat 'docker push sabavathlakshmi/sample:t2'
             }
         }
         stage('Deploy'){
